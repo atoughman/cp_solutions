@@ -6,34 +6,23 @@ class Solution
 public:
     vector<int> productExceptSelf(vector<int> &nums)
     {
-        int mul = 1;
-        int zeros = 0;
-        for (auto &x : nums)
+        vector<int> v;
+        v.push_back(nums[0]);
+
+        for (int i = 1; i < nums.size(); i++)
         {
-            if (x == 0)
-            {
-                zeros++;
-            }
-            else
-                mul *= x;
+            v.push_back(v.back() * nums[i]);
         }
 
-        vector<int> ans;
-        for (auto &x : nums)
+        int right_mul = 1;
+        for (int i = nums.size() - 1; i > 0; i--)
         {
-            if (zeros == 0)
-                ans.push_back(mul / x);
-            else if (zeros == 1)
-            {
-                if (x == 0)
-                    ans.push_back(mul);
-                else
-                    ans.push_back(0);
-            }
-            else
-                ans.push_back(0);
+            v[i] = v[i - 1] * right_mul;
+            right_mul *= nums[i];
         }
 
-        return ans;
+        v[0] = right_mul;
+
+        return v;
     }
 };
