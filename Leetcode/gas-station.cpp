@@ -7,19 +7,20 @@ using namespace std;
 class Solution {
 public:
     int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
-        vector<int> v;
+        int gas_left = 0;
+        int start = 0;
+        int defecit = 0;
 
-        for(int i=0; i<gas.size(); i++) v.push_back(gas[i] - cost[i]);
-
-        int so_far = 0;
-        for(int k=1; k<=2; k++) {
-            for(int i=v.size()-1; i>=0; i--) {
-                so_far += v[i];
-                so_far = min(0, so_far);
-                if(k == 2 and so_far == 0) return i;
+        for(int i=0; i<gas.size(); i++) {
+            gas_left += gas[i] - cost[i];
+            if(gas_left < 0) {
+                defecit += gas_left;
+                start = i+1;
+                gas_left = 0;
             }
         }
-
-        return -1;
+        
+        if(gas_left + defecit >= 0) return start;
+        else return -1;
     }
 };
