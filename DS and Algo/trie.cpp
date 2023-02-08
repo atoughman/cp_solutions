@@ -13,6 +13,10 @@ struct node {
         ch = x;
         is_last = false;
     }
+
+    bool has(char x) {
+        return mp.find(x) != mp.end();
+    }
 };
 
 class Trie {
@@ -25,7 +29,7 @@ public:
     void insert(string word) {
         node* cur = root;
         for(auto x: word) {
-            if(!cur->mp[x]) cur->mp[x] = new node(x);
+            if(!cur->has(x)) cur->mp[x] = new node(x);
             cur = cur->mp[x];
         }
         cur->is_last = true;
@@ -34,7 +38,7 @@ public:
     node* match(string a) {
         node* cur = root;
         for(auto &x: a) {
-            if(!cur->mp[x]) return NULL;
+            if(!cur->has(x)) return NULL;
             cur = cur->mp[x];
         }
         return cur;
