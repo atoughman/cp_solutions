@@ -1,37 +1,28 @@
+// problem link
+// https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution
-{
+class Solution {
 public:
-    int lengthOfLongestSubstring(string s)
-    {
+    int lengthOfLongestSubstring(string s) {
+        unordered_map<char, int> next;
+
         int l = 0;
         int r = 0;
-        int len = 0;
-        int so_far = 0;
-        map<char, int> mp;
+        int n = s.size();
+        int ans = 0;
 
-        while (r < s.size())
-        {
-            if (mp[s[r]])
-            {
-                while (s[l] != s[r])
-                {
-                    mp[s[l]]--;
-                    --len;
-                    ++l;
-                }
-                mp[s[l]]--;
-                --len;
-                ++l;
+        while(r<n) {
+            if(next[s[r]] > 0) {
+                l = max(l, next[s[r]]);
             }
-            mp[s[r]]++;
-            ++len;
+            ans = max(ans, r-l+1);
+            next[s[r]] = r+1;
             ++r;
-            so_far = max(so_far, len);
-        }
+        }  
 
-        return so_far;
+        return ans;
     }
 };
