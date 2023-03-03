@@ -45,3 +45,50 @@ public:
         return ans;
     }
 };
+
+
+//             DP : ITERATIVE + 2-D MEMO
+
+class Solution {
+public:
+    string longestPalindrome(string s) {
+        int n = s.size();
+        int dp[n][n];
+        
+        int mxr = 0;
+        int mxc = 0;
+
+        for(int i=0; i<n; i++) {
+            dp[i][i] = 1;
+        }
+
+        for(int i=0; i<n-1; i++) {
+            dp[i][i+1] = (s[i] == s[i+1]);
+            if(dp[i][i+1]) {
+                mxr = i;
+                mxc = i+1;
+            }
+
+        }
+
+        for(int j=2; j<n; j++) {
+            int r = 0;
+            int c = j;
+            while(c<n) {
+                if(s[r] == s[c] and dp[r+1][c-1]) {
+                    dp[r][c] = 1;
+                } else dp[r][c] = 0;
+
+                if(dp[r][c] and c-r+1 > mxc-mxr+1) {
+                    mxr = r;
+                    mxc = c;
+                }
+
+                ++r;
+                ++c;
+            }
+        }
+
+        return s.substr(mxr, mxc-mxr+1);
+    }
+};
