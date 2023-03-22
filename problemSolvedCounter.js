@@ -1,7 +1,7 @@
 const fs = require("fs/promises");
 const path = require("path");
 
-const ignoreList = ["DS and Algo"];
+const ignoreList = ["DS and Algo","contest-link.md"];
 
 const countFiles = async (dir, ignoreList = []) => {
     let count = 0;
