@@ -5,10 +5,16 @@
 <p align="center">Welcome to the "cp_solution" repository! Here, I share solutions to problems that I solve on a daily basis, which <strong>helps me stay in touch with Data Structures and Algorithms</strong>.</p>
 
 <!-- Shields -->
-<p align="center">
-  <img src="https://img.shields.io/badge/Total%20Problems%20Solved-281-brightgreen" alt="Total Problems Solved" width="30%" height="30%">
-</p>
-
+<div class="shields" style="display:flex">
+   <img src="https://img.shields.io/badge/Leetcode-208-brightgreen" alt="Leetcode" width="auto" height="30px">&nbsp;&nbsp;&nbsp;
+   <img src="https://img.shields.io/badge/GeeksForGeeks-26-brightgreen" alt="GeeksForGeeks" width="auto" height="30px">&nbsp;&nbsp;&nbsp;
+   <img src="https://img.shields.io/badge/Codeforces-19-brightgreen" alt="Codeforces" width="auto" height="30px">&nbsp;&nbsp;&nbsp;
+   <img src="https://img.shields.io/badge/Codechef-17-brightgreen" alt="Codechef" width="auto" height="30px">&nbsp;&nbsp;&nbsp;
+   <img src="https://img.shields.io/badge/CodingNinjas-4-brightgreen" alt="CodingNinjas" width="auto" height="30px">&nbsp;&nbsp;&nbsp;
+   <img src="https://img.shields.io/badge/InterviewBit-2-brightgreen" alt="InterviewBit" width="auto" height="30px">&nbsp;&nbsp;&nbsp;
+   <img src="https://img.shields.io/badge/HackerEarth-1-brightgreen" alt="HackerEarth" width="auto" height="30px">&nbsp;&nbsp;&nbsp;
+   <img src="https://img.shields.io/badge/SPOJ-1-brightgreen" alt="SPOJ" width="auto" height="30px">&nbsp;&nbsp;&nbsp;
+</div>
 <!-- About -->
 <h2>About</h2>
 <ul>
@@ -19,3 +25,5 @@
   </ul>
   <li>Additionally, I hope that by sharing my solutions, others can benefit from my experience and improve their own skills as well</li>
 </ul>
+
+## Total Problems solved = 278
