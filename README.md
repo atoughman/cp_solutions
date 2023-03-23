@@ -6,7 +6,7 @@
 
 <!-- Shields -->
 <div class="shields" style="display:flex">
-   <img src="https://img.shields.io/badge/Leetcode-202-brightgreen" alt="Leetcode" width="auto" height="30px">&nbsp;&nbsp;&nbsp;
+   <img src="https://img.shields.io/badge/Leetcode-203-brightgreen" alt="Leetcode" width="auto" height="30px">&nbsp;&nbsp;&nbsp;
    <img src="https://img.shields.io/badge/GeeksForGeeks-25-brightgreen" alt="GeeksForGeeks" width="auto" height="30px">&nbsp;&nbsp;&nbsp;
    <img src="https://img.shields.io/badge/Codeforces-18-brightgreen" alt="Codeforces" width="auto" height="30px">&nbsp;&nbsp;&nbsp;
    <img src="https://img.shields.io/badge/Codechef-16-brightgreen" alt="Codechef" width="auto" height="30px">&nbsp;&nbsp;&nbsp;
@@ -26,4 +26,4 @@
   <li>Additionally, I hope that by sharing my solutions, others can benefit from my experience and improve their own skills as well</li>
 </ul>
 
-## Total Problems solved = 269
+## Total Problems solved = 270
