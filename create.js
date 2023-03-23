@@ -62,6 +62,10 @@ async function createFile(dirPath, fileName, sourceFilePath, url) {
     // open file in vs code
     console.log('\nOpening File in Vs Code.\n');
     exec(`code ${filePath}`);
+    
+    // run problem counter script
+    console.log('Running Problem counter script.\n');
+    exec(`node .\\problemSolvedCounter.js`)
   } catch (err) {
     console.log(`\n${colors.bold}${colors.FG_RED}${err.message}${colors.RESET}`);
   }
