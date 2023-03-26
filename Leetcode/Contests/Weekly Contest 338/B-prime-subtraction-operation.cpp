@@ -37,11 +37,15 @@ public:
             for(int i=x-1; i>=0; i--) {
                 if(is_prime[i] and x-i > so_far) {
                     so_far = x - i;
+                    cout << so_far << endl;
                     done = true;
                     break;
                 }
             }
-            if(!done) return false;
+            if(!done) {
+                if(so_far >= x) return false;
+                so_far = x;
+            }
         }
         
         return true;

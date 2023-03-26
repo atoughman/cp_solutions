@@ -7,12 +7,12 @@ public:
         int ans = 0;
         for(int i=0; i<k; i++) {
             if(numOnes > 0) {
-                ans += numOnes;
+                ans += 1;
                 numOnes -= 1;
             } else if(numZeros > 0) {
                 numZeros -= 1;
             } else {
-                ans += numNegOnes;
+                ans -= 1;
                 numNegOnes -= 1;
             }
         }
